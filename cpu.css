@@ -10,10 +10,15 @@ body
 		font-weight:300;*/
 		/*font: 32px 'Segoe UI';*/
 }
+h1, h2, h3, h4
+{
+	text-align: center;
+}
 p/*Селектор. Селектором может быть дескриптор, id, либо class*/
 {
 	/*набор стилей:*/
 	text-align:justify;
+	text-indent: 48px;
 	/*
 		У каждого стиля есть имя и значение.
 		Синтаксис описания стиля:
@@ -23,4 +28,10 @@ p/*Селектор. Селектором может быть дескрипто
 		name:value1 value2 ... valueN;
 		Для числовых значений обязательно нужно задавать единицы измеренийя.
 	*/
+}
+figure 
+{
+	text-align: center;
+	font-style:italic;
+	font-weight:200;
 }
