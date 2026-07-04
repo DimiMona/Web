@@ -1,37 +1,52 @@
-﻿
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-body
-{
-	/*font-family:'Segoe UI',Tahoma,Verdana, Geneva, sans-serif;*/
-	font-family: Roboto Condensed,'Cambria Math';
+﻿﻿@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+	/*font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+	font-family: Roboto Condensed, 'Cambria Math';
 	font-size: 22px;
-		/*font-style:italic;
-		font-weight:300;*/
-		/*font: 32px 'Segoe UI';*/
+	padding: 50px;
+	/*font-style:italic;*/
+	/*font-weight:800;*/
+	/*font: 32px 'Segoe UI';*/
 }
-h1, h2, h3, h4
-{
+
+h1, h2, h3, h4 {
 	text-align: center;
 }
-p/*Селектор. Селектором может быть дескриптор, id, либо class*/
-{
+
+p /*Селектор. Селектором может быть дескриптор, id, либо class*/ {
 	/*набор стилей:*/
-	text-align:justify;
+	text-align: justify;
 	text-indent: 48px;
 	/*
-		У каждого стиля есть имя и значение.
-		Синтаксис описания стиля:
-		name:value;
-		У некоторых стилей может быть несколько значений,
-		в таком случае они перечисляются через Пробел:
-		name:value1 value2 ... valueN;
-		Для числовых значений обязательно нужно задавать единицы измеренийя.
-	*/
+        У каждого стиля есть имя и значение.
+        Синтаксис описания стиля:
+        name:value;
+        У некоторых стилей может быть несколько значений,
+        в таком случае они перечисляются через ПРОБЕЛ:
+        name:value1 value2 ... valueN;
+        Для числовых значений обязательно нужно задавать единицы измерения.
+    */
 }
+
 figure 
 {
 	text-align: center;
-	font-style:italic;
-	font-weight:200;
+	font-style: italic;
+	font-weight: 200;
 }
+
+.cite 
+{
+	border-left: solid 5px blue;
+	padding-left: 15px;
+	margin-left: 50px;
+	/*border-width:1px;
+	border-style:solid;*/
+	/*margin:32px;*/
+	/*padding:50px 100px 200px 300px;*/
+}
+/*
+	border  - рамка;
+	margin  - внешний отступ от рамки;
+	padding	- внутренний отступ от рамки;
+*/
