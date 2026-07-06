@@ -1,43 +1,64 @@
-﻿table {
-	border: solid 5px;
-	border-collapse: collapse;
-	margin: 32px auto;
+﻿table 
+{
+	border: solid 5px; /* внешняя рамка таблицы */
+	border-collapse: collapse; /* убираем двойные границы */
+	margin: 50px auto; /* центрируем таблицу */
 }
 
-table:hover
+	table:hover 
+	{
+		box-shadow: 0 0 50px 0 gray; /* тень при наведении на таблицу */
+	}
+tr:hover 
 {
-	box-shadow:0 0 50px 0 gray;
-}
-tr:hover {
 	/*box-shadow: [direction] x y blure spread color; */
-	box-shadow: inset 0 -3px 10px 1px green;
+	box-shadow: inset 0 -3px 50px 1px green; /* зелёное свечение внутри строки */
 }
+
 thead 
 {
-	border-bottom: solid 3px;
-	background-color: #5555AA;
-	color: aliceblue;
+	border-bottom: solid 3px; /* линия под шапкой */
+	background-color: #5555AA; /* синий фон шапки */
+	color: aliceblue; /* светло-голубой текст */
 }
 
 	thead th 
 	{
-		padding: 25px;
+		padding: 25px; /* большие отступы в заголовках */
 	}
 
 th, td 
 {
-	border: solid 1px;
+	border: solid 1px; /* сетка внутри таблицы */
 }
 
-tbody th 
-{
-	text-align: left;
-	padding: 2px;
-	padding-left: 5px;
-	padding-right: 15px;
+tbody th {
+	text-align: left; /* названия процессоров — слева */
+	padding: 2px; /* маленькие отступы */
+	padding-left: 5px; /* отступ слева */
+	padding-right: 15px; /* отступ справа */
 }
 
 tbody td 
 {
-	text-align: center;
+	text-align: center; /* числа — по центру */
+}
+
+caption:hover 
+{
+	box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6); /* ← цветная тень */
+	transform: scale(1.02); /*эффект увеличения*/ 
+}
+caption 
+{
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /*Создаёт градиентный фон*/
+	color: white; /*цвет текста*/
+
+	caption-side: top; /*Расположение подписи над таблицей*/
+	margin-bottom: 15px;/*Отступ снизу от подписи до таблиц*/
+	border-radius: 10px; /*Закругление углов*/
+	font-weight: bold; /*Жирное начертание текста*/
+	font-size: 22px; /*Размер шрифта*/
+	padding: 15px 30px;	/*Внутренние отступы*/
+	transition: 0.3s ease; /* ← плавность анимации */
 }
