@@ -1,0 +1,827 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>Periodic_table</title>
+	<link rel="stylesheet" href="Periodic_table.css">
+</head>
+<body>
+	<table class="ship">
+		<caption>
+			Периодическая система химических
+			элементов Д.И.Менделеева
+		</caption>
+		<!-- Строка 1 -->
+		<tr>
+			<td class="beige vertical-text" rowspan="2">Период</td>
+			<td class="beige vertical-text" rowspan="2">Ряд</td>
+			<td class="beige" colspan="10">Группы элементов</td>
+		</tr>
+		<!-- Строка 2 -->
+		<tr>
+			<td class="beige">I</td>
+			<td class="beige">II</td>
+			<td class="beige">III</td>
+			<td class="beige">IV</td>
+			<td class="beige">V</td>
+			<td class="beige">VI</td>
+			<td class="beige">VII</td>
+			<td class="beige" colspan="3">VIII</td>
+		</tr>
+		<!-- Строка 3 -->
+		<tr>
+			<td class="beige">1</td>
+			<td class="beige">1</td>
+			<td class="pink" style="text-align:right;>
+				<span class="el-symbol">(H)</span>
+			</td>
+			<td class="yellow"></td>
+			<td class="yellow"></td>
+			<td class="yellow"></td>
+			<td class="yellow"></td>
+			<td class="yellow"></td>
+			<td class="pink element">
+				<span class="el-symbol">H</span>       <!-- Символ -->
+				<span class="el-number">1</span>      <!-- Номер -->
+				<span class="el-mass">1,00797</span>
+				<span class="el-name">Водород</span>
+			</td>
+			<td class="pink element">
+				<span class="el-symbol">He</span>       <!-- Символ -->
+				<span class="el-number">2</span>      <!-- Номер -->
+				<span class="el-mass">4,0026</span>
+				<span class="el-name">Гелий</span>
+			</td>
+			<td class="beige" colspan="2" rowspan="3">
+				<!--<span class="el-symbol">Li</span>-->       <!-- Символ -->
+				<!--<span class="el-number">3</span>-->      <!-- Номер -->
+				<!--<span class="el-mass">6,939</span>
+				<span class="el-name">Литий</span>-->
+			</td>
+
+		</tr>
+		<!-- Строка 4 -->
+		<tr>
+			<td class="beige">2</td>
+			<td class="beige">2</td>
+			<td class="pink">
+				<span class="el-symbol">Li</span>       <!-- Символ -->
+				<span class="el-number">3</span>      <!-- Номер -->
+				<span class="el-mass">6,939</span>
+				<span class="el-name">Литий</span>
+			</td>
+			<td class="pink">
+				<span class="el-symbol">Be</span>       <!-- Символ -->
+				<span class="el-number">4</span>      <!-- Номер -->
+				<span class="el-mass">9.0122</span>
+				<span class="el-name">Бериллий</span>
+			</td>
+			<td class="yellow">
+				<span class="el-symbol">B</span>       <!-- Символ -->
+				<span class="el-number">5</span>      <!-- Номер -->
+				<span class="el-mass">10,811</span>
+				<span class="el-name">Бор</span>
+			</td>
+			<td class="yellow">
+				<span class="el-symbol">C</span>       <!-- Символ -->
+				<span class="el-number">6</span>      <!-- Номер -->
+				<span class="el-mass">12.01115</span>
+				<span class="el-name">Углерод</span>
+			</td>
+			<td class="yellow">
+				<span class="el-symbol">N</span>       <!-- Символ -->
+				<span class="el-number">7</span>      <!-- Номер -->
+				<span class="el-mass">14.0067</span>
+				<span class="el-name">Азот</span>
+			</td>
+			<td class="yellow">
+				<span class="el-symbol">O</span>       <!-- Символ -->
+				<span class="el-number">8</span>      <!-- Номер -->
+				<span class="el-mass">15.9994</span>
+				<span class="el-name">Кислород</span>
+			</td>
+			<td class="yellow">
+				<span class="el-symbol">F</span>       <!-- Символ -->
+				<span class="el-number">9</span>      <!-- Номер -->
+				<span class="el-mass">18.9984</span>
+				<span class="el-name">Фтор</span>
+			</td>
+			<td class="yellow">
+				<span class="el-symbol">Ne</span>       <!-- Символ -->
+				<span class="el-number">10</span>      <!-- Номер -->
+				<span class="el-mass">20.179</span>
+				<span class="el-name">Неон</span>
+			</td>
+
+		</tr>
+		<!-- Строка 5 -->
+		<tr>
+			<td class="beige">3</td>
+			<td class="beige">3</td>
+			<td class="pink element">
+				<span class="el-symbol">Na</span>
+				<span class="el-number">11</span>
+				<span class="el-mass">22.9898</span>
+				<span class="el-name">Натрий</span>
+			</td>
+			<td class="pink element">
+				<span class="el-symbol">Mg</span>
+				<span class="el-number">12</span>
+				<span class="el-mass">24.312</span>
+				<span class="el-name">Магний</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Al</span>
+				<span class="el-number">13</span>
+				<span class="el-mass">26.9815</span>
+				<span class="el-name">Алюминий</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Si</span>
+				<span class="el-number">14</span>
+				<span class="el-mass">28.086</span>
+				<span class="el-name">Кремний</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">P</span>
+				<span class="el-number">15</span>
+				<span class="el-mass">30.9738</span>
+				<span class="el-name">Фосфор</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">S</span>
+				<span class="el-number">16</span>
+				<span class="el-mass">32.064</span>
+				<span class="el-name">Сера</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Cl</span>
+				<span class="el-number">17</span>
+				<span class="el-mass">35.453</span>
+				<span class="el-name">Хлор</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Ar</span>
+				<span class="el-number">18</span>
+				<span class="el-mass">39.948</span>
+				<span class="el-name">Аргон</span>
+			</td>
+		</tr>
+		<!-- Строка 6 -->
+		<tr>
+			<td class="beige" rowspan="2">4</td>
+			<td class="beige">4</td>
+			<td class="pink element">
+				<span class="el-symbol">K</span>
+				<span class="el-number">19</span>
+				<span class="el-mass">39.102</span>
+				<span class="el-name">Калий</span>
+			</td>
+			<td class="pink element">
+				<span class="el-symbol">Ca</span>
+				<span class="el-number">20</span>
+				<span class="el-mass">40.08</span>
+				<span class="el-name">Кальций</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Sc</span>
+				<span class="el-number">21</span>
+				<span class="el-mass">44.956</span>
+				<span class="el-name">Скандий</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Ti</span>
+				<span class="el-number">22</span>
+				<span class="el-mass">47.90</span>
+				<span class="el-name">Титан</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">V</span>
+				<span class="el-number">23</span>
+				<span class="el-mass">50.942</span>
+				<span class="el-name">Ванадий</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Cr</span>
+				<span class="el-number">24</span>
+				<span class="el-mass">51.996</span>
+				<span class="el-name">Хром</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Mn</span>
+				<span class="el-number">25</span>
+				<span class="el-mass">54.938</span>
+				<span class="el-name">Марганец</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Fe</span>
+				<span class="el-number">26</span>
+				<span class="el-mass">55.847</span>
+				<span class="el-name">Железо</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Co</span>
+				<span class="el-number">27</span>
+				<span class="el-mass">58.933</span>
+				<span class="el-name">Кобальт</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Ni</span>
+				<span class="el-number">28</span>
+				<span class="el-mass">58.71</span>
+				<span class="el-name">Никель</span>
+			</td>
+		</tr>
+		<!-- Строка 7 -->
+		<tr>
+			<td class="beige">5</td>
+			<td class="blue element">
+				<span class="el-symbol">Cu</span>
+				<span class="el-number">29</span>
+				<span class="el-mass">63.546</span>
+				<span class="el-name">Медь</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Zn</span>
+				<span class="el-number">30</span>
+				<span class="el-mass">65.38</span>
+				<span class="el-name">Цинк</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Ga</span>
+				<span class="el-number">31</span>
+				<span class="el-mass">69.72</span>
+				<span class="el-name">Галлий</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Ge</span>
+				<span class="el-number">32</span>
+				<span class="el-mass">72.59</span>
+				<span class="el-name">Германий</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">As</span>
+				<span class="el-number">33</span>
+				<span class="el-mass">74.922</span>
+				<span class="el-name">Мышьяк</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Se</span>
+				<span class="el-number">34</span>
+				<span class="el-mass">78.96</span>
+				<span class="el-name">Селен</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Br</span>
+				<span class="el-number">35</span>
+				<span class="el-mass">79.904</span>
+				<span class="el-name">Бром</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Kr</span>
+				<span class="el-number">36</span>
+				<span class="el-mass">83.80</span>
+				<span class="el-name">Криптон</span>
+			</td>
+			<td class="yellow"></td>
+			<td class="yellow"></td>
+		</tr>
+		<!-- Строка 8 -->
+		<tr>
+			<td class="beige" rowspan="2">5</td>
+			<td class="beige">6</td>
+			<td class="pink element">
+				<span class="el-symbol">Rb</span>
+				<span class="el-number">37</span>
+				<span class="el-mass">85.47</span>
+				<span class="el-name">Рубидий</span>
+			</td>
+			<td class="pink element">
+				<span class="el-symbol">Sr</span>
+				<span class="el-number">38</span>
+				<span class="el-mass">87.62</span>
+				<span class="el-name">Стронций</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Y</span>
+				<span class="el-number">39</span>
+				<span class="el-mass">88.905</span>
+				<span class="el-name">Иттрий</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Zr</span>
+				<span class="el-number">40</span>
+				<span class="el-mass">91.22</span>
+				<span class="el-name">Цирконий</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Nb</span>
+				<span class="el-number">41</span>
+				<span class="el-mass">92.906</span>
+				<span class="el-name">Ниобий</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Mo</span>
+				<span class="el-number">42</span>
+				<span class="el-mass">95.94</span>
+				<span class="el-name">Молибден</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Tc</span>
+				<span class="el-number">43</span>
+				<span class="el-mass">98.906</span>
+				<span class="el-name">Технеций</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Ru</span>
+				<span class="el-number">44</span>
+				<span class="el-mass">101.07</span>
+				<span class="el-name">Рутений</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Rh</span>
+				<span class="el-number">45</span>
+				<span class="el-mass">102.905</span>
+				<span class="el-name">Родий</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Pd</span>
+				<span class="el-number">46</span>
+				<span class="el-mass">106.42</span>
+				<span class="el-name">Палладий</span>
+			</td>
+		</tr>
+		<!-- Строка 9 -->
+		<tr>
+			<td class="beige">7</td>
+			<td class="blue element">
+				<span class="el-symbol">Ag</span>
+				<span class="el-number">47</span>
+				<span class="el-mass">107.868</span>
+				<span class="el-name">Серебро</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Cd</span>
+				<span class="el-number">48</span>
+				<span class="el-mass">112.41</span>
+				<span class="el-name">Кадмий</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">In</span>
+				<span class="el-number">49</span>
+				<span class="el-mass">114.82</span>
+				<span class="el-name">Индий</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Sn</span>
+				<span class="el-number">50</span>
+				<span class="el-mass">118.69</span>
+				<span class="el-name">Олово</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Sb</span>
+				<span class="el-number">51</span>
+				<span class="el-mass">121.75</span>
+				<span class="el-name">Сурьма</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Te</span>
+				<span class="el-number">52</span>
+				<span class="el-mass">127.60</span>
+				<span class="el-name">Теллур</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">I</span>
+				<span class="el-number">53</span>
+				<span class="el-mass">126.904</span>
+				<span class="el-name">Иод</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Xe</span>
+				<span class="el-number">54</span>
+				<span class="el-mass">131.30</span>
+				<span class="el-name">Ксенон</span>
+			</td>
+			<td class="yellow"></td>
+			<td class="yellow"></td>
+		</tr>
+		<!-- Строка 10 -->
+		<tr>
+			<td class="beige" rowspan="2">6</td>
+			<td class="beige">8</td>
+			<td class="pink element">
+				<span class="el-symbol">Cs</span>
+				<span class="el-number">55</span>
+				<span class="el-mass">132.905</span>
+				<span class="el-name">Цезий</span>
+			</td>
+			<td class="pink element">
+				<span class="el-symbol">Ba</span>
+				<span class="el-number">56</span>
+				<span class="el-mass">137.34</span>
+				<span class="el-name">Барий</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">La*</span>
+				<span class="el-number">57</span>
+				<span class="el-mass">138.91</span>
+				<span class="el-name">Лантан</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Hf</span>
+				<span class="el-number">72</span>
+				<span class="el-mass">178.49</span>
+				<span class="el-name">Гафний</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Ta</span>
+				<span class="el-number">73</span>
+				<span class="el-mass">180.948</span>
+				<span class="el-name">Тантал</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">W</span>
+				<span class="el-number">74</span>
+				<span class="el-mass">183.85</span>
+				<span class="el-name">Вольфрам</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Re</span>
+				<span class="el-number">75</span>
+				<span class="el-mass">186.207</span>
+				<span class="el-name">Рений</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Os</span>
+				<span class="el-number">76</span>
+				<span class="el-mass">190.23</span>
+				<span class="el-name">Осмий</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Ir</span>
+				<span class="el-number">77</span>
+				<span class="el-mass">192.217</span>
+				<span class="el-name">Иридий</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Pt</span>
+				<span class="el-number">78</span>
+				<span class="el-mass">195.08</span>
+				<span class="el-name">Платина</span>
+			</td>
+		</tr>
+		<!-- Строка 11 -->
+		<tr>
+			<td class="beige">9</td>
+			<td class="blue element">
+				<span class="el-symbol">Au</span>
+				<span class="el-number">79</span>
+				<span class="el-mass">196.967</span>
+				<span class="el-name">Золото</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Hg</span>
+				<span class="el-number">80</span>
+				<span class="el-mass">200.59</span>
+				<span class="el-name">Ртуть</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Tl</span>
+				<span class="el-number">81</span>
+				<span class="el-mass">204.37</span>
+				<span class="el-name">Таллий</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Pb</span>
+				<span class="el-number">82</span>
+				<span class="el-mass">207.19</span>
+				<span class="el-name">Свинец</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Bi</span>
+				<span class="el-number">83</span>
+				<span class="el-mass">208.980</span>
+				<span class="el-name">Висмут</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Po</span>
+				<span class="el-number">84</span>
+				<span class="el-mass">[210]</span>
+				<span class="el-name">Полоний</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">At</span>
+				<span class="el-number">85</span>
+				<span class="el-mass">[210]</span>
+				<span class="el-name">Астат</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Rn</span>
+				<span class="el-number">86</span>
+				<span class="el-mass">[222]</span>
+				<span class="el-name">Радон</span>
+			</td>
+			<td class="yellow"></td>
+			<td class="yellow"></td>
+		</tr>
+		<!-- Строка 12 -->
+		<tr>
+			<td class="beige" rowspan="2">7</td>
+			<td class="beige">10</td>
+			<td class="pink element">
+				<span class="el-symbol">Fr</span>
+				<span class="el-number">87</span>
+				<span class="el-mass">[223]</span>
+				<span class="el-name">Франций</span>
+			</td>
+			<td class="pink element">
+				<span class="el-symbol">Ra</span>
+				<span class="el-number">88</span>
+				<span class="el-mass">[226]</span>
+				<span class="el-name">Радий</span>
+			</td>
+			<td class="green element" >
+				<span class="el-symbol">Ac*</span>
+				<span class="el-number">89</span>
+				<span class="el-mass">[227]</span>
+				<span class="el-name">Актиний</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Rf</span>
+				<span class="el-number">104</span>
+				<span class="el-mass">[261]</span>
+				<span class="el-name">Резерфордий</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Db</span>
+				<span class="el-number">105</span>
+				<span class="el-mass">[262]</span>
+				<span class="el-name">Дубний</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Sg</span>
+				<span class="el-number">106</span>
+				<span class="el-mass">[263]</span>
+				<span class="el-name">Сиборгий</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Bh</span>
+				<span class="el-number">107</span>
+				<span class="el-mass">[264]</span>
+				<span class="el-name">Борий</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Hs</span>
+				<span class="el-number">108</span>
+				<span class="el-mass">[265]</span>
+				<span class="el-name">Хассий</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Mt</span>
+				<span class="el-number">109</span>
+				<span class="el-mass">[268]</span>
+				<span class="el-name">Мейтнерий</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Ds</span>
+				<span class="el-number">110</span>
+				<span class="el-mass">[271]</span>
+				<span class="el-name">Дармштадтий</span>
+			</td>
+		</tr>
+		<!-- Строка 13 -->
+		<tr>
+			<td class="beige">11</td>
+			<td class="blue element">
+				<span class="el-symbol">Rg</span>
+				<span class="el-number">111</span>
+				<span class="el-mass">[272]</span>
+				<span class="el-name">Рентгений</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Cn</span>
+				<span class="el-number">112</span>
+				<span class="el-mass">[277]</span>
+				<span class="el-name">Коперниций</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Nh</span>
+				<span class="el-number">113</span>
+				<span class="el-mass">[284]</span>
+				<span class="el-name">Нихоний</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Fl</span>
+				<span class="el-number">114</span>
+				<span class="el-mass">[289]</span>
+				<span class="el-name">Флеровий</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Mc</span>
+				<span class="el-number">115</span>
+				<span class="el-mass">[288]</span>
+				<span class="el-name">Московий</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Lv</span>
+				<span class="el-number">116</span>
+				<span class="el-mass">[292]</span>
+				<span class="el-name">Ливерморий</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Ts</span>
+				<span class="el-number">117</span>
+				<span class="el-mass">[294]</span>
+				<span class="el-name">Теннессин</span>
+			</td>
+			<td class="yellow element">
+				<span class="el-symbol">Og</span>
+				<span class="el-number">118</span>
+				<span class="el-mass">[294]</span>
+				<span class="el-name">Оганесон</span>
+			</td>
+			<td class="yellow"></td>
+			<td class="yellow"></td>
+		</tr>
+
+	</table>
+
+	<table class="ship2">
+		<tr>
+			<td class="withe">*Лантаноиды</td>			
+			<td class="green element">
+				<span class="el-symbol">Ce</span>
+				<span class="el-number">58</span>
+				<span class="el-mass">140.12</span>
+				<span class="el-name">Церий</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Pr</span>
+				<span class="el-number">59</span>
+				<span class="el-mass">140.91</span>
+				<span class="el-name">Празеодим</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Nd</span>
+				<span class="el-number">60</span>
+				<span class="el-mass">144.24</span>
+				<span class="el-name">Неодим</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Pm</span>
+				<span class="el-number">61</span>
+				<span class="el-mass">145.0</span>
+				<span class="el-name">Прометий</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Sm</span>
+				<span class="el-number">62</span>
+				<span class="el-mass">150.36</span>
+				<span class="el-name">Самарий</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Eu</span>
+				<span class="el-number">63</span>
+				<span class="el-mass">151.96</span>
+				<span class="el-name">Европий</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Gd</span>
+				<span class="el-number">64</span>
+				<span class="el-mass">157.25</span>
+				<span class="el-name">Гадолиний</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Tb</span>
+				<span class="el-number">65</span>
+				<span class="el-mass">158.93</span>
+				<span class="el-name">Тербий</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Dy</span>
+				<span class="el-number">66</span>
+				<span class="el-mass">162.50</span>
+				<span class="el-name">Диспрозий</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Ho</span>
+				<span class="el-number">67</span>
+				<span class="el-mass">164.93</span>
+				<span class="el-name">Гольмий</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Er</span>
+				<span class="el-number">68</span>
+				<span class="el-mass">167.26</span>
+				<span class="el-name">Эрбий</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Tm</span>
+				<span class="el-number">69</span>
+				<span class="el-mass">168.93</span>
+				<span class="el-name">Тулий</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Yb</span>
+				<span class="el-number">70</span>
+				<span class="el-mass">173.04</span>
+				<span class="el-name">Иттербий</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Lu</span>
+				<span class="el-number">71</span>
+				<span class="el-mass">174.97</span>
+				<span class="el-name">Лютеций</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="withe">*Aктиноиды </td>		
+			<td class="green element">
+				<span class="el-symbol">Th</span>
+				<span class="el-number">90</span>
+				<span class="el-mass">232.04</span>
+				<span class="el-name">Торий</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Pa</span>
+				<span class="el-number">91</span>
+				<span class="el-mass">231.04</span>
+				<span class="el-name">Протактиний</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">U</span>
+				<span class="el-number">92</span>
+				<span class="el-mass">238.03</span>
+				<span class="el-name">Уран</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Np</span>
+				<span class="el-number">93</span>
+				<span class="el-mass">237.0</span>
+				<span class="el-name">Нептуний</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Pu</span>
+				<span class="el-number">94</span>
+				<span class="el-mass">239.0</span>
+				<span class="el-name">Плутоний</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Am</span>
+				<span class="el-number">95</span>
+				<span class="el-mass">243.0</span>
+				<span class="el-name">Америций</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Cm</span>
+				<span class="el-number">96</span>
+				<span class="el-mass">247.0</span>
+				<span class="el-name">Кюрий</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Bk</span>
+				<span class="el-number">97</span>
+				<span class="el-mass">247.0</span>
+				<span class="el-name">Берклий</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Cf</span>
+				<span class="el-number">98</span>
+				<span class="el-mass">251.0</span>
+				<span class="el-name">Калифорний</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Es</span>
+				<span class="el-number">99</span>
+				<span class="el-mass">252.0</span>
+				<span class="el-name">Эйнштейний</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Fm</span>
+				<span class="el-number">100</span>
+				<span class="el-mass">257.0</span>
+				<span class="el-name">Фермий</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">Md</span>
+				<span class="el-number">101</span>
+				<span class="el-mass">258.0</span>
+				<span class="el-name">Менделевий</span>
+			</td>
+			<td class="green element">
+				<span class="el-symbol">No</span>
+				<span class="el-number">102</span>
+				<span class="el-mass">259.0</span>
+				<span class="el-name">Нобелий</span>
+			</td>
+			<td class="blue element">
+				<span class="el-symbol">Lr</span>
+				<span class="el-number">103</span>
+				<span class="el-mass">262.0</span>
+				<span class="el-name">Лоуренсий</span>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
