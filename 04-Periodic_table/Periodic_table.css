@@ -141,3 +141,40 @@ caption {
 	clear: right;
 	margin-top: -12px; /* Поднимаем вверх */
 }
+:root {
+	--highlight-pink: #FF8AAE;
+	--highlight-yellow: #FFE066;
+	--highlight-blue: #66D9FF;
+	--highlight-green: #A8F0A8;
+	--highlight-orange: #FFB84D;
+	--highlight-purple: #CC88FF;
+	--highlight-cyan: #88FFFF;
+}
+
+.pink:hover {
+	background-color: var(--highlight-pink) !important;
+}
+
+.yellow:hover {
+	background-color: var(--highlight-yellow) !important;
+}
+
+.blue:hover {
+	background-color: var(--highlight-blue) !important;
+}
+
+.green:hover {
+	background-color: var(--highlight-green) !important;
+}
+
+.orange:hover {
+	background-color: var(--highlight-orange) !important;
+}
+
+.purple:hover {
+	background-color: var(--highlight-purple) !important;
+}
+
+.cyan:hover {
+	background-color: var(--highlight-cyan) !important;
+}
