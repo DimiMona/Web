@@ -4,6 +4,12 @@
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	font-family: Tahoma;
+
+	display:flex;
+	justify-content:center;
+	align-items:center;
+
+	padding:48px;
 }
 
 .main-window {
@@ -159,7 +165,7 @@
 
 #display {
 	width: 95%;
-	border: solid 1px gray;
+	border: solid 1.5px gray;
 	border-radius: 0px;
 	text-align: right;
 }
@@ -205,7 +211,7 @@
 .calc-buttons button 
 {
 	color: blue;
-	border:solid 1px darkblue;
+	border:solid 1.5px darkblue;
 	border-radius:5px;
 
 	box-shadow: inset 0px -2px 3px 0px lightgray;
@@ -217,7 +223,7 @@
 }
 	.calc-buttons button:active {
 		background-color: lightgray;
-		box-shadow: inset 0px -1px 5px 0px white, inset 0px 2px 5px 1px darkgray;
+		box-shadow: inset 0px -1px 5px 0px white, inset 0px 2px 3px 0px darkgray;
 	}
 .calc-buttons > .memory-button, .calc-buttons > .operation-button, .clear-buttons > button {
 	color: red;
