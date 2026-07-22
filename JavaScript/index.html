@@ -99,10 +99,24 @@
 	</details>
 
 	<div>
-		<label for="factorial-number">Введите число для вычисления факториала:</label>
+		<label for="factorial-number">Введите число для вычисления:</label>
 		<input id="factorial-number" type="number">
 		<div id="factorial-result"></div>
-		<button onclick="Factorial()">Вычислить</button>
+		<button onclick="Factorial()">Вычислить факториал</button>
+
+		<br><br>
+
+		<label for="Degree-number">Введите степень для вычисления:</label>
+		<input id="Degree-number" type="number">
+		<div id="Degree-result"></div>
+		<button onclick="Degree()">Вычислить число в степени</button>
+
+		<br><br>
+
+		<label for="fibonacci-number">Введите предел для ряда Фибоначчи:</label>
+		<input id="fibonacci-number" type="number">
+		<div id="fibonacci-result"></div>
+		<button onclick="Fibonacci()">Вывести ряд Фибоначчи</button>
 	</div>
 
 	<script>
@@ -120,6 +134,47 @@
 			document.getElementById("factorial-result").innerHTML += `<h3>${n}! = ${f};</h3>`;
 		}
 
+		function Degree() {
+			let factorial_number = document.getElementById("factorial-number");
+			let degree_number = document.getElementById("Degree-number");
+			//Получаем элемент страницы, в который пользователь вводит значение.
+			let n = factorial_number.value;
+			let result = BigInt(1);
+			let d = degree_number.value;
+
+			document.getElementById("factorial-result").innerHTML = ``;
+			result = n ** d;
+			document.getElementById("Degree-result").innerHTML = `<h3> ${n}^${d} = ${result};</h3> `;
+		}
+
+		function Fibonacci() {
+			let input = document.getElementById("fibonacci-number");
+			let limit = input.value;
+			
+			document.getElementById("fibonacci-result").innerHTML = ``;
+
+			// Первые два числа Фибоначчи
+			let a = 0n;
+			let b = 1n;			
+
+			
+			let result = "0, 1";
+			let next = a + b;
+
+			
+			while (next <= limit) {
+				result += `, ${next}`;
+				a = b;
+				b = next;
+				next = a + b;
+			}
+			
+			document.getElementById("fibonacci-result").innerHTML = `
+			<h3>Ряд Фибоначчи до ${limit}:</h3>
+			<p>${result}</p>
+			<p>Количество чисел: ${result.split(', ').length}</p>
+		`;
+		}
 		//alert("Привет!\nЭто модальное окно браузера");
 		//var name = prompt("Введите Ваше имя");
 		////alert('Привет ' + name); //конкатенация
