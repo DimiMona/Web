@@ -1,0 +1,38 @@
+﻿﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="events.css">
+    <title>JavaScript Events</title>
+</head>
+<body>
+    <h1>JavaScript Events</h1>
+
+    <div class="load-image">
+        <div class="image-container">
+            <img src="D:\Users\User\Pictures\1398215896_1768974925.jpg" alt="Фото студента" id="image">
+        </div>
+        <input type="file" id="image-file" onchange="SetImage()">
+        <div id="debug"></div>
+    </div>
+    <script>
+		function SetImage()
+		{
+			let filename = document.getElementById("image-file");
+			//let reader = new FileReader();
+			//reader.onload = function (e)
+			//{
+			//	document.getElementById("image").src = e.target.result;
+			//}
+			//reader.readAsDataURL(filename.files[0]);
+
+			let file = filename.files[0];
+			//document.getElementById("debug").innerHTML = filename.files[0].name;
+			document.getElementById("debug").innerHTML = URL.createObjectURL(file);
+			document.getElementById("image").src = URL.createObjectURL(file);
+		}
+    </script>
+</body>
+</html>
