@@ -6,3 +6,11 @@
 	width: 400px;
 	height: 300px;
 }
+.images-and-colors, .colors > div {
+	display: flex;
+	justify-content: space-between;
+}
+.colors > div
+{
+	margin:16px;
+}
