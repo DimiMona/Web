@@ -22,11 +22,11 @@
 		<div class="colors">
 			<div>
 				<label for="background-color">Выберите цвет фона:</label>
-				<input type="color" id="background-color" oninput="setBackgroundColor()">
+				<input type="color" id="background-color" oninput="setColor(event)">
 			</div>
 			<div>
 				<label for="foreground-color">Выберите цвет текста:</label>
-				<input type="color" id="foreground-color" oninput="setForegroundColor(event)">
+				<input type="color" id="foreground-color" oninput="setColor(event)">
 			</div>
 		</div>
 	</div>
@@ -54,6 +54,19 @@
 		function setForegroundColor(e)
 		{
 			document.body.style.color = e.target.value;
+		}
+		function setColor(e) {
+			console.log(e.target);
+
+			document.body.style[e.target.id === 'background-color' ? 'background-color' : 'color'] = e.target.value;
+
+			//(e.target.id === "background-color" ? document.body.style.backgroundColor : document.body.style.color);
+			//if (e.target.id === "background-color") {
+			//	document.body.style.backgroundColor = e.target.value;
+			//}
+			//else {
+			//	document.body.style.color = e.target.value;
+			//}
 		}
     </script>
 </body>
