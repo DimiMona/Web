@@ -1,16 +1,59 @@
-﻿﻿body {
+﻿body 
+{
+	transition: background-color 3s, color 3s;
 }
 
-.image-container, img {
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+	.header img {
+		width: 32px;
+		height: 32px;
+	}
+
+#switch-background {
+	width: 32px;
+	height: 32px;
+	background-size: 32px 32px;
+	/*transition: background-image 3s, filter 3s;*/
+	transition: 3s;
+}
+
+.dark {
+	background-color: #323232;
+	color: white;
+}
+
+	.dark #switch-background 
+	{
+		background-image: url("sun.png");
+		filter:brightness(0) invert(1);
+	}
+
+light {
+	background-color: white;
+	color: black;
+}
+
+	.light #switch-background 
+	{
+	background-image: url("moon.png")
+	}
+/*///////////////////////////////////////////////////////////////////*/
+.image-container, .image-container > img {
 	border: solid 1px;
 	width: 400px;
 	height: 300px;
 }
+
 .images-and-colors, .colors > div {
 	display: flex;
 	justify-content: space-between;
 }
-.colors > div
-{
-	margin:16px;
+
+.colors > div {
+	margin: 16px;
 }

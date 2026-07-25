@@ -3,12 +3,20 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="events.css">
-    <title>JavaScript Events</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="events.css">
+	<title>JavaScript Events</title>
 </head>
-<body>
-    <h1>JavaScript Events</h1>
+<body class="light">
+	<div class="header">
+		<h3>Header</h3>
+		<h3 id="mouse-coords"></h3>
+		<div id="switch-background"></div>
+		<!--<img src="moon.png" id="switch-background">-->
+
+	</div>
+
+	<h1>JavaScript Events</h1>
 
 	<div class="images-and-colors">
 		<div class="load-image">
@@ -31,9 +39,8 @@
 		</div>
 	</div>
 
-    <script>
-		function setImage()
-		{
+	<script>
+		function setImage() {
 			let filename = document.getElementById("image-file");
 			//let reader = new FileReader();
 			//reader.onload = function (e)
@@ -47,12 +54,10 @@
 			document.getElementById("debug").innerHTML = URL.createObjectURL(file);
 			document.getElementById("image").src = URL.createObjectURL(file);
 		}
-		function setBackgroundColor()
-		{
+		function setBackgroundColor() {
 			document.body.style.backgroundColor = document.getElementById("background-color").value;
 		}
-		function setForegroundColor(e)
-		{
+		function setForegroundColor(e) {
 			document.body.style.color = e.target.value;
 		}
 		function setColor(e) {
@@ -68,6 +73,17 @@
 			//	document.body.style.color = e.target.value;
 			//}
 		}
-    </script>
+		document, addEventListener("mousemove", trackMouse);
+		function trackMouse(e) {
+			document.getElementById("mouse-coords").innerHTML = `Mouse: X = ${e.clientX}, Y = ${e.clientY}`;
+		}
+		document.getElementById("switch-background").addEventListener("click", switchBackground);
+		function switchBackground(e) {
+			console.log(e.target.id);
+			console.log(e.target.src);
+			//e.target.src = (e.target.src.includes('moon.png') ? 'sun.png' : 'moon.png');
+			document.body.className = document.body.className === 'dark' ? 'light' : 'dark';
+		}
+	</script>
 </body>
 </html>
