@@ -6,6 +6,8 @@
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="events.css">
 	<title>JavaScript Events</title>
+	<style>		
+	</style>
 </head>
 <body class="light">
 	<div class="header">
@@ -35,6 +37,12 @@
 			<div>
 				<label for="foreground-color">Выберите цвет текста:</label>
 				<input type="color" id="foreground-color" oninput="setColor(event)">
+			</div>
+			<div>
+				<label for="transition-duration">Длительность перехода (сек):</label>
+				<input type="range" min="0" max="20" id="transition-duration" oninput="setTransitionDuration(event)">
+				<span id="duration-display">10</span> сек
+
 			</div>
 		</div>
 	</div>
@@ -84,6 +92,18 @@
 			//e.target.src = (e.target.src.includes('moon.png') ? 'sun.png' : 'moon.png');
 			document.body.className = document.body.className === 'dark' ? 'light' : 'dark';
 		}
+
+		function setTransitionDuration(e) {
+			const duration = e.target.value;
+			document.getElementById("duration-display").textContent = duration;
+			document.body.style.transitionDuration = duration + 's';
+
+			
+		}
+
+		/* Инициализация при загрузке страницы*/
+		const slider = document.getElementById('transition-duration');
+		if (slider) setTransitionDuration({ target: slider });
 	</script>
 </body>
 </html>

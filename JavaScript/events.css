@@ -1,6 +1,7 @@
 ﻿body 
-{
-	transition: background-color 3s, color 3s;
+{		
+	transition: background-color var(--transition-duration), color var(--transition-duration);
+	
 }
 
 .header {
@@ -19,7 +20,7 @@
 	height: 32px;
 	background-size: 32px 32px;
 	/*transition: background-image 3s, filter 3s;*/
-	transition: 3s;
+	transition: background-image var(--transition-duration), filter var(--transition-duration);
 }
 
 .dark {
@@ -33,7 +34,7 @@
 		filter:brightness(0) invert(1);
 	}
 
-light {
+.light {
 	background-color: white;
 	color: black;
 }
