@@ -20,90 +20,56 @@
 
 	<h1>JavaScript Events</h1>
 
-	<div class="images-and-colors">
-		<div class="load-image">
-			<div class="image-container">
-				<img src="D:\Users\User\Pictures\1398215896_1768974925.jpg" alt="Фото студента" id="image">
+	<details>
+		<summary>Картинки и цветы</summary>		
+		<div class="images-and-colors">
+			<div class="load-image">
+				<div class="image-container">
+					<img src="D:\Users\User\Pictures\1398215896_1768974925.jpg" alt="Фото студента" id="image">
+				</div>
+				<input type="file" id="image-file" onchange="setImage()">
+				<div id="debug"></div>
 			</div>
-			<input type="file" id="image-file" onchange="setImage()">
-			<div id="debug"></div>
-		</div>
 
-		<div class="colors">
-			<div>
-				<label for="background-color">Выберите цвет фона:</label>
-				<input type="color" id="background-color" oninput="setColor(event)">
-			</div>
-			<div>
-				<label for="foreground-color">Выберите цвет текста:</label>
-				<input type="color" id="foreground-color" oninput="setColor(event)">
-			</div>
-			<div>
-				<label for="transition-duration">Длительность перехода (сек):</label>
-				<input type="range" min="0" max="20" id="transition-duration" oninput="setTransitionDuration(event)">
-				<span id="duration-display">10</span> сек
+			<div class="colors">
+				<div>
+					<label for="background-color">Выберите цвет фона:</label>
+					<input type="color" id="background-color" oninput="setColor(event)">
+				</div>
+				<div>
+					<label for="foreground-color">Выберите цвет текста:</label>
+					<input type="color" id="foreground-color" oninput="setColor(event)">
+				</div>
+				<div>
+					<label for="transition-duration">Длительность перехода (сек):</label>
+					<input type="range" min="0" max="20" id="transition-duration" oninput="setTransitionDuration(event)">
+					<span id="duration-display">10</span> сек
 
+				</div>
 			</div>
 		</div>
+	</details>
+
+	<h2 id="full-time"></h2>>
+
+	<div id="clock">
+		<div id="current-time">
+			<span id="hours"></span>:
+			<span id="minutes"></span>:
+			<span id="seconds"></span>
+		</div>
+		<div id="current-date">
+			<span id="years"></span>:
+			<span id="months"></span>:
+			<span id="days"></span>
+		</div>
+		<div id="day-of-week"></div>
+		<input type="checkbox" id="show-date"><label for="show-date">Показать дату</label>
+		<input type="checkbox" id="show-weekday"><label for="show-weekday">Показать день недели</label>
 	</div>
 
-	<script>
-		function setImage() {
-			let filename = document.getElementById("image-file");
-			//let reader = new FileReader();
-			//reader.onload = function (e)
-			//{
-			//	document.getElementById("image").src = e.target.result;
-			//}
-			//reader.readAsDataURL(filename.files[0]);
-
-			let file = filename.files[0];
-			//document.getElementById("debug").innerHTML = filename.files[0].name;
-			document.getElementById("debug").innerHTML = URL.createObjectURL(file);
-			document.getElementById("image").src = URL.createObjectURL(file);
-		}
-		function setBackgroundColor() {
-			document.body.style.backgroundColor = document.getElementById("background-color").value;
-		}
-		function setForegroundColor(e) {
-			document.body.style.color = e.target.value;
-		}
-		function setColor(e) {
-			console.log(e.target);
-
-			document.body.style[e.target.id === 'background-color' ? 'background-color' : 'color'] = e.target.value;
-
-			//(e.target.id === "background-color" ? document.body.style.backgroundColor : document.body.style.color);
-			//if (e.target.id === "background-color") {
-			//	document.body.style.backgroundColor = e.target.value;
-			//}
-			//else {
-			//	document.body.style.color = e.target.value;
-			//}
-		}
-		document, addEventListener("mousemove", trackMouse);
-		function trackMouse(e) {
-			document.getElementById("mouse-coords").innerHTML = `Mouse: X = ${e.clientX}, Y = ${e.clientY}`;
-		}
-		document.getElementById("switch-background").addEventListener("click", switchBackground);
-		function switchBackground(e) {
-			console.log(e.target.id);
-			console.log(e.target.src);
-			//e.target.src = (e.target.src.includes('moon.png') ? 'sun.png' : 'moon.png');
-			document.body.className = document.body.className === 'dark' ? 'light' : 'dark';
-		}
-
-		function setTransitionDuration(e) {
-			const duration = e.target.value;
-			document.getElementById("duration-display").textContent = duration;
-			document.body.style.transitionDuration = duration + 's';
-
-			
-		}
-
-		/* Инициализация при загрузке страницы*/
-		const slider = document.getElementById('transition-duration');
-		if (slider) setTransitionDuration({ target: slider });
+	<script src="events.js">
+		
 	</script>
 </body>
 </html>
