@@ -71,13 +71,21 @@
 		<input type="time" id="target-time" value="22:00">
 		<input type="button" id="btn-start" value="Start">
 	</div>
-	<pre id="debug">
-	<label for="target-date-value">Target date:</label><span id="target-date-value"></span><br>
-	<label for="target-time-value">Target time:</label><span id="target-time-value"></span><br>
-	<label for="timezone">Timezone: </label><span id="timezone"></span><br>
-	<label for="duration">Duration: </label><span id="duration"></span><br>
-	<label for="timestamp">Timestamp:</label><span id="timestamp"></span><br>
+	<details>
+		<summary>Debug</summary>
+		<pre id="debug">
+		<label for="target-date-value">Target date:</label><span id="target-date-value"></span><br>
+
+		<label for="target-time-value">Target time:</label><span id="target-time-value"></span><br>
+
+		<label for="timezone">Timezone: </label><span id="timezone"></span><br>
+
+		<label for="duration">Duration: </label><span id="duration"></span><br>
+
+		<label for="timestamp">Timestamp:</label><span id="timestamp"></span><br>
+
 	</pre>
+	</details>
 	<div id="display">
 		<div class="time-block">
 			<div id="hours-unit" class="time-unit"></div>
@@ -92,6 +100,13 @@
 			<div id="seconds-marker" class="time-marker">Seconds</div>
 		</div>
 	</div>
+
+	<li>List item</li>
+	<ol id="construct">
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+	</ol>
 
 	<script src="events.js">
 		let a;
