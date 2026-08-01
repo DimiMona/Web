@@ -1,14 +1,11 @@
-﻿@font-face {
+﻿﻿@font-face {
 	font-family: Digital-7 Mono;
-	src: url('digital-7 (mono).ttf');
-	/*src: url('http://localhost:57232/digital-7 (mono).ttf');*/
+	src: url('digital-7(mono).ttf');
+	/*src: url('https://okovtun.github.io/PV_522_WEB/JavaScript/digital-7(mono).ttf');*/
 }
 
-
-body 
-{		
-	transition: background-color var(--transition-duration), color var(--transition-duration);
-	
+body {
+	transition: background-color 3s, color 3s;
 }
 
 .header {
@@ -21,13 +18,13 @@ body
 		width: 32px;
 		height: 32px;
 	}
-
+/* ///////////////////////////////////////////////////////////////////////// */
 #switch-background {
 	width: 32px;
 	height: 32px;
 	background-size: 32px 32px;
+	transition: 3s;
 	/*transition: background-image 3s, filter 3s;*/
-	transition: background-image var(--transition-duration), filter var(--transition-duration);
 }
 
 .dark {
@@ -35,10 +32,9 @@ body
 	color: white;
 }
 
-	.dark #switch-background 
-	{
+	.dark #switch-background {
 		background-image: url("sun.png");
-		filter:brightness(0) invert(1);
+		filter: brightness(0) invert(1);
 	}
 
 .light {
@@ -46,11 +42,11 @@ body
 	color: black;
 }
 
-	.light #switch-background 
-	{
-	background-image: url("moon.png")
+	.light #switch-background {
+		background-image: url("moon.png");
 	}
-/*///////////////////////////////////////////////////////////////////*/
+
+/* ///////////////////////////////////////////////////////////////////////// */
 .image-container, .image-container > img {
 	border: solid 1px;
 	width: 400px;
@@ -65,15 +61,62 @@ body
 .colors > div {
 	margin: 16px;
 }
-/*///////////////////////////////////////////////////////////////////*/
 
-#clock
-{
-	font-family:Digital-7 Mono;
-	font-size:48px;
-	text-align:center;
+/* ///////////////////////////////////////////////////////////////////////// */
+
+#clock {
+	font-family: Digital-7 Mono;
+	font-size: 48px;
+	text-align: center;
 }
-#clock_controls
-{
-	font-size:24px;
+
+	#clock > div {
+		margin: 32px;
+	}
+
+#clock-controls {
+	font-size: 24px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////// */
+
+#countdown-timer > input {
+	font-size: 22px;
+}
+
+#debug {
+	font-size: 22px;
+}
+
+#display {
+	display: flex;
+	justify-content: space-around;
+	margin: 16px;
+	padding: 16px;
+}
+
+.time-block {
+	border: solid 3px;
+	border-radius: 10px;
+	width: 148px;
+	box-shadow: 0px 0px 25px 5px gray;
+}
+
+.time-unit {
+	font-family: 'Digital-7 Mono';
+	font-size: 68px;
+	color: rgb(200,0,0);
+	background-color: Highlight;
+	height: 148px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.time-marker {
+	font-size: 22px;
+	border: solid 1px;
+	background-color: darkred;
+	color: aliceblue;
+	text-align: center;
 }

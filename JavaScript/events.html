@@ -6,8 +6,6 @@
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="events.css">
 	<title>JavaScript Events</title>
-	<style>
-	</style>
 </head>
 <body class="light">
 	<div class="header">
@@ -15,9 +13,7 @@
 		<h3 id="mouse-coords"></h3>
 		<div id="switch-background"></div>
 		<!--<img src="moon.png" id="switch-background">-->
-
 	</div>
-
 	<h1>JavaScript Events</h1>
 
 	<details>
@@ -35,43 +31,71 @@
 				<div>
 					<label for="background-color">Выберите цвет фона:</label>
 					<input type="color" id="background-color" oninput="setColor(event)">
+					<!--<input type="color" id="background-color" oninput="setBackgroundColor()">-->
 				</div>
 				<div>
 					<label for="foreground-color">Выберите цвет текста:</label>
 					<input type="color" id="foreground-color" oninput="setColor(event)">
-				</div>
-				<div>
-					<label for="transition-duration">Длительность перехода (сек):</label>
-					<input type="range" min="0" max="20" id="transition-duration" oninput="setTransitionDuration(event)">
-					<span id="duration-display">10</span> сек
-
+					<!--<input type="color" id="foreground-color" oninput="setForegroundColor(event)">-->
 				</div>
 			</div>
 		</div>
 	</details>
 
-	<h2 id="full-time"></h2>>
+	<h2 id="full-time"></h2>
 
-	<div id="clock">
-		<div id="current-time">
-			<span id="hours"></span> :
-			<span id="minutes"></span> :
-			<span id="seconds"></span>
+	<details>
+		<summary>Clock</summary>
+		<div id="clock">
+			<div id="current-time">
+				<span id="hours"></span> :
+				<span id="minutes"></span> :
+				<span id="seconds"></span>
+			</div>
+			<div id="current-date">
+				<span id="years"></span> .
+				<span id="months"></span> .
+				<span id="days"></span>
+			</div>
+			<div id="day-of-week"></div>
+			<div id="clock-controls">
+				<input type="checkbox" id="show-date"><label for="show-date">Показать дату</label>
+				<input type="checkbox" id="show-weekday"><label for="show-weekday">Показать день недели</label>
+			</div>
 		</div>
-		<div id="current-date">
-			<span id="years"></span> .
-			<span id="months"></span> .
-			<span id="days"></span>
+	</details>
+
+	<div id="countdown-timer">
+		<h2>Countdown timer</h2>
+		<input type="date" id="target-date" value="2026-08-01">
+		<input type="time" id="target-time" value="22:00">
+		<input type="button" id="btn-start" value="Start">
+	</div>
+	<pre id="debug">
+	<label for="target-date-value">Target date:</label><span id="target-date-value"></span><br>
+	<label for="target-time-value">Target time:</label><span id="target-time-value"></span><br>
+	<label for="timezone">Timezone: </label><span id="timezone"></span><br>
+	<label for="duration">Duration: </label><span id="duration"></span><br>
+	<label for="timestamp">Timestamp:</label><span id="timestamp"></span><br>
+	</pre>
+	<div id="display">
+		<div class="time-block">
+			<div id="hours-unit" class="time-unit"></div>
+			<div id="hours-marker" class="time-marker">Hours</div>
 		</div>
-		<div id="day-of-week"></div>
-		<div id="clock_controls">
-			<input type="checkbox" id="show-date"><label for="show-date">Показать дату</label>
-			<input type="checkbox" id="show-weekday"><label for="show-weekday">Показать день недели</label>
+		<div class="time-block">
+			<div id="minutes-unit" class="time-unit"></div>
+			<div id="minutes-marker" class="time-marker">Minutes</div>
+		</div>
+		<div class="time-block">
+			<div id="seconds-unit" class="time-unit"></div>
+			<div id="seconds-marker" class="time-marker">Seconds</div>
 		</div>
 	</div>
 
 	<script src="events.js">
-
+		let a;
+		alert("Hello");
 	</script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-function setImage() {
+﻿function setImage() {
 	let filename = document.getElementById("image-file");
 	//let reader = new FileReader();
 	//reader.onload = function (e)
@@ -49,7 +49,7 @@ function setTransitionDuration(e) {
 	document.body.style.transitionDuration = duration + 's';
 }
 
-/* ������������� ��� �������� ��������*/
+/* Инициализация при загрузке страницы*/
 const slider = document.getElementById('transition-duration');
 if (slider) setTransitionDuration({ target: slider });
 
@@ -77,4 +77,112 @@ function tick_timer() {
 	document.getElementById("day-of-week").style.visibility = document.getElementById("show-weekday").checked ? "visible" : "hidden";
 
 	setTimeout(tick_timer, 100);
+}
+document.getElementById("btn-start").addEventListener("click", startCountdownTimer);
+function startCountdownTimer() {
+	let targetDateControl = document.getElementById("target-date");
+	let targetTimeControl = document.getElementById("target-time");
+	let btnStart = document.getElementById("btn-start");
+	if (btnStart.value === "Start") {
+		btnStart.value = "Stop";
+		targetDateControl.disabled = targetTimeControl.disabled = true;
+		tickCountdown();
+	}
+	else {
+		btnStart.value = "Start";
+		targetDateControl.disabled = targetTimeControl.disabled = false;
+		//clearTimeout(tickCountdown);
+	}
+}
+function tickCountdown() {
+	if (document.getElementById("btn-start").value === "Start") return;
+	let now = new Date();
+
+	let targetDate = document.getElementById("target-date").valueAsDate;
+	let targetTime = document.getElementById("target-time").valueAsDate;
+
+	//Âûðàâíèâàåì ÷àñîâîé ïîÿñ:
+	targetDate.setHours(targetDate.getHours() + targetDate.getTimezoneOffset() / 60);
+	targetTime.setHours(targetTime.getHours() + targetTime.getTimezoneOffset() / 60);
+
+	//Ñèíõðîíèçèðóåì öåëåâûóþ äàòó è âðåìÿ:
+	targetTime.setFullYear(targetDate.getFullYear());
+	targetTime.setMonth(targetDate.getMonth());
+	targetTime.setDate(targetDate.getDate());
+
+	let timestamp = targetTime - now;
+	let duration = Math.trunc(timestamp / 1000);	//Truncation
+
+	document.getElementById("target-date-value").innerHTML = targetDate;
+	document.getElementById("target-time-value").innerHTML = targetTime;
+	document.getElementById("timezone").innerHTML = targetTime.getTimezoneOffset();
+	document.getElementById("duration").innerHTML = duration;
+	document.getElementById("timestamp").innerHTML = timestamp;
+
+	const SECONDS_PER_MINUTE = 60;
+	const SECONDS_PER_HOUR = 3600;
+	const SECONDS_PER_DAY = 86400;
+
+	let time_of_day = duration % SECONDS_PER_DAY;
+
+	document.getElementById("hours-unit").innerHTML = Math.trunc(time_of_day / SECONDS_PER_HOUR);
+	time_of_day = time_of_day % SECONDS_PER_HOUR;
+	document.getElementById("minutes-unit").innerHTML = Math.trunc(time_of_day / SECONDS_PER_MINUTE);
+	document.getElementById("seconds-unit").innerHTML = time_of_day % SECONDS_PER_MINUTE;
+
+	setTimeout(tickCountdown, 100);
+}
+document.getElementById("btn-start").addEventListener("click", startCountdownTimer);
+function startCountdownTimer() {
+	let targetDateControl = document.getElementById("target-date");
+	let targetTimeControl = document.getElementById("target-time");
+	let btnStart = document.getElementById("btn-start");
+	if (btnStart.value === "Start") {
+		btnStart.value = "Stop";
+		targetDateControl.disabled = targetTimeControl.disabled = true;
+		tickCountdown();
+	}
+	else {
+		btnStart.value = "Start";
+		targetDateControl.disabled = targetTimeControl.disabled = false;
+		//clearTimeout(tickCountdown);
+	}
+}
+function tickCountdown() {
+	if (document.getElementById("btn-start").value === "Start") return;
+	let now = new Date();
+
+	let targetDate = document.getElementById("target-date").valueAsDate;
+	let targetTime = document.getElementById("target-time").valueAsDate;
+
+	//Âûðàâíèâàåì ÷àñîâîé ïîÿñ:
+	targetDate.setHours(targetDate.getHours() + targetDate.getTimezoneOffset() / 60);
+	targetTime.setHours(targetTime.getHours() + targetTime.getTimezoneOffset() / 60);
+
+	//Ñèíõðîíèçèðóåì öåëåâûóþ äàòó è âðåìÿ:
+	targetTime.setFullYear(targetDate.getFullYear());
+	targetTime.setMonth(targetDate.getMonth());
+	targetTime.setDate(targetDate.getDate());
+
+	let timestamp = targetTime - now;
+	let duration = Math.trunc(timestamp / 1000);	//Truncation
+
+	document.getElementById("target-date-value").innerHTML = targetDate;
+	document.getElementById("target-time-value").innerHTML = targetTime;
+	document.getElementById("timezone").innerHTML = targetTime.getTimezoneOffset();
+	document.getElementById("duration").innerHTML = duration;
+	document.getElementById("timestamp").innerHTML = timestamp;
+
+	const SECONDS_PER_MINUTE = 60;
+	const SECONDS_PER_HOUR = 3600;
+	const SECONDS_PER_DAY = 86400;
+
+	let time_of_day = duration % SECONDS_PER_DAY;
+
+	document.getElementById("hours-unit").innerHTML = Math.trunc(time_of_day / SECONDS_PER_HOUR);
+	time_of_day = time_of_day % SECONDS_PER_HOUR;
+	document.getElementById("minutes-unit").innerHTML = Math.trunc(time_of_day / SECONDS_PER_MINUTE);
+	document.getElementById("seconds-unit").innerHTML = time_of_day % SECONDS_PER_MINUTE;
+
+	setTimeout(tickCountdown, 100);
 }
